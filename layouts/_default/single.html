@@ -9,6 +9,11 @@
       posted at <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006/01/02" }}</time> &nbsp; 
     {{ end }}
 
+    <!-- 日常カテゴリについての投稿は、日常系であることがわかるようにする -->
+    {{ if in .Params.categories "日常"  }}
+      <i class="fas"></i>
+      <a href="/categories/日常">日常</a>
+    {{ end }}
     </div>
   </header>
 
